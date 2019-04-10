@@ -16,3 +16,23 @@ Install notes for Lubuntu 18.10 on HTC Shift X9500
 6. Once Wifi is setup then choose to install Lubuntu.
 
 7. When navigating the installer screen you will not be able to click the 'Next' button to get to the next screen of the installer because it is not visible. Press Alt and left mouse click and then move the screen up so you can see the buttons and proceed.
+
+8. The installer will take some time to complete and don't panic ig it seems to get stuck on the regional settings. It seems to download all of the regional settings as part of the install so can take some time.
+
+9. Once done remove the USB stick and reboot and login to Lubuntu. Your wifi should be detected and should connect.
+
+10. Click the windows button to launch the start menu and type in 'qterminal' to launch the terminal.
+
+11. Update the packages:
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+```
+
+12. The default Lubuntu store has never worked well for me so it is better to install the Snap store IMO opinion. To do that:
+
+```
+sudo snap install snapd
+sudo snap install snap-store
+```
