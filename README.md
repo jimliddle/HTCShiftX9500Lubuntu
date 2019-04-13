@@ -37,7 +37,7 @@ sudo snap install snapd
 sudo snap install snap-store
 ```
 
-13. Next lets sort out the Shift Touchpad / mouse issues. Moving around with the right hand touchpad causes the virtual desktops to swtich constantly. To fix this:
+13. Next lets sort out the Shift Touchpad / mouse issues. Moving around with the right hand touchpad causes the virtual desktops to switch constantly. To fix this:
 
 ```
 cd ~/.config/openbox
@@ -57,3 +57,20 @@ Delete the following lines:
   Log out and log back in again
 
 Now if you wish to switch between desktops use Cntrl-Alt-Left and Cntrl- Alt-Right
+
+14. Now lets enable double tap for the right hand touchpad to make life easier. Drop out to QTerminal in Lubuntu and enter:
+
+```
+sudo leafpad /etc/X11/xorg.conf.d/30-touchpad.conf
+```
+
+enter the following content:
+
+```
+Section "InputClass"
+  Identifier "touchpad"
+  Driver "libinput"
+  MatchisTouchpad "on"
+  Option "Tapping" "on"
+EndSection
+```
