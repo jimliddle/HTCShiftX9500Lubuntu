@@ -39,20 +39,20 @@ sudo snap install snap-store
 
 13. Next lets sort out the Shift Touchpad / mouse issues. Moving around with the right hand touchpad causes the virtual desktops to swtich constantly. To fix this:
 
-'''
+```
 cd ~/.config/openbox
 cp lubuntu-rc.xml lubuntu-rc.xml.bak
 leafpad lubuntu-rc.xml
-'''
+```
 
 Delete the following lines:
 
-'''
+```
 <mousebind button="UP" action="click">
  <action name="DesktopPrevious" />
 <mousebind button="Down" action="click">
  <action name="DesktopNext" />
-  '''
+```
   
   Log out and log back in again
 
